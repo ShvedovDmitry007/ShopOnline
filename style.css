@@ -1,20 +1,28 @@
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("fonts/lato-regular.woff2") format("woff2"),
+      url("fonts/lato-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("fonts/lato-bold.woff2") format("woff2"),
+      url("fonts/lato-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+
 body {
   margin: 0 auto;
   max-width: 1920px;
   padding: 0 75px;
-  font-family: -apple-system, 
-                BlinkMacSystemFont, 
-                'Segoe UI', 
-                Roboto, 
-                Oxygen, 
-                Ubuntu, 
-                Cantarell, 
-                'Open Sans', 
-                'Helvetica Neue', 
-                sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
-  color: #2d2d2d;
   font-size: 22px;
+  color: #2d2d2d;
 }
 
 
@@ -30,8 +38,12 @@ body {
   margin: 0;
   margin-bottom: 38px;
   line-height: 1.5;
-  white-space: pre-line;
+}
+
+.text:last-child {
+  margin: 0;
   margin-bottom: 150px;
+  line-height: 1.5;
 }
 
 .back {
