@@ -1,0 +1,123 @@
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 245px);
+
+  grid-template-areas: 
+  "book sale shoes shoes present present"
+  "sneakers sneakers shoes shoes laptop laptop"
+  "newyear newyear newyear newyear dress chemistry"
+  "newyear newyear newyear newyear dress balls";
+  gap: 60px;
+  counter-reset: item;
+}
+
+.cards-list__item {
+  display: flex;
+  font-size: 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.cards-list__item:before {
+  font-size: 30px;
+  font-weight: 700;
+  color: green;
+  counter-increment: item;
+  content: "Item " counter(item);
+}
+
+.cards-list__item:nth-child(1) {
+  background-image: url('/img/cards-book.jpg');
+  grid-area: book;
+}
+
+.cards-list__item:nth-child(2) {
+  background-image: url('/img/cards-sale.jpg');
+  grid-area: sale;
+}
+
+.cards-list__item:nth-child(3) {
+  background-image: url('/img/cards-shoes.jpg');
+  grid-area: shoes;
+}
+
+.cards-list__item:nth-child(4) {
+  background-image: url('/img/cards-present.jpg');
+  grid-area: present;
+}
+
+
+.cards-list__item:nth-child(5) {
+  background-image: url('/img/cards-sneakers.jpg');
+  grid-area: sneakers;
+}
+
+.cards-list__item:nth-child(6) {
+  background-image: url('/img/cards-laptop.jpg');
+  grid-area: laptop;
+}
+
+.cards-list__item:nth-child(7) {
+  background-image: url('/img/cards-newyear.jpg');
+  grid-area: newyear;
+}
+
+.cards-list__item:nth-child(8) {
+  background-image: url('/img/cards-dress.jpg');
+  grid-area: dress;
+}
+
+.cards-list__item:nth-child(9) {
+  background-image: url('/img/cards-chemistry.jpg');
+  grid-area: chemistry;
+}
+
+.cards-list__item:nth-child(10) {
+  background-image: url('/img/cards-balls.jpg');
+  grid-area: balls;
+}
+
+
+@media (max-width: 1440px) {
+  .cards-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 217px);
+    grid-template-areas: 
+    "book sale shoes shoes"
+    "sneakers sneakers shoes shoes"
+    "present present dress chemistry"
+    "laptop laptop dress balls"
+    "newyear newyear newyear newyear"
+    "newyear newyear newyear newyear";
+    gap: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cards-list {
+    grid-template-rows: repeat(6, 140px);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-list {
+    grid-template-columns: repeat(2, minmax(130px, 700px));
+    grid-template-rows: 130px 118px 130px 130px 118px 118px 130px 130px 123px;
+    grid-template-areas: 
+    "book sale "
+    "sneakers sneakers"
+    "shoes shoes"
+    "shoes shoes"
+    "present present"
+    "laptop laptop"
+    "dress chemistry"
+    "dress balls"
+    "newyear newyear";
+
+    justify-content: center;
+  }
+
+}
